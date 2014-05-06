@@ -7,11 +7,9 @@ Then(/^I should see "(.*?)"$/) do |text|
 	puts text
 	puts "-----" * 20
   page.should have_content text
-
 end
 
 Then(/^I should find the text "(.*?)" in the selector "(.*?)"$/) do |text, selector|
-  # page.should have_selector selector, content: text
   within(selector) do
   	page.should have_content text
   end
@@ -23,4 +21,16 @@ end
 
 Given(/^I am on "(.*?)"$/) do |text|
   visit text
+end
+
+
+When(/^I fill in "(.*?)" with "(.*?)"$/) do |name, value|
+  fill_in name, with: value
+  puts name
+  puts value
+end
+
+When(/^I click "(.*?)"$/) do |button|
+  puts button
+  find_button(button).click
 end
