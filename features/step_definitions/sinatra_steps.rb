@@ -6,7 +6,6 @@ Then(/^I should see "(.*?)"$/) do |text|
 	puts "-----" * 20
 	puts text
 	puts "-----" * 20
-	# puts arg
   page.should have_content text
 
 end
@@ -20,4 +19,8 @@ end
 
 Then(/^I should see "(.*?)" in a link$/) do |text|
 page.should have_link text
+end
+
+Given(/^I am on "(.*?)"$/) do |text|
+  visit text
 end
