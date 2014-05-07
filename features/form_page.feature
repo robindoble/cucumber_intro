@@ -17,3 +17,4 @@ Scenario: Fill out form
   And I fill in "email" with "john@doe.com"
   And I click "Sign up!"
   Then I should see "Hi there John Doe, you will now receive our email at john@doe.com"
+  

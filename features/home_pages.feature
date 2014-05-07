@@ -14,3 +14,5 @@ Scenario: Find heading on home page
 Scenario: Find the link to the form
   Given I am on the home page
   Then I should see "Sign up for our newsletter." in a link
+
+  
